@@ -9,6 +9,6 @@ for (i = 1; i <= factS; i++) {
     factS = factS * i;
 }
 for (i = factS; i <= factE; i++) {
-    factS = factS*i;
-    document.write (i + '! =' + factS + '<br>');
+    factS = factS * i;
+    document.write(i + '! =' + factS + '<br>');
 }
