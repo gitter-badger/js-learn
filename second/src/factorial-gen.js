@@ -12,3 +12,4 @@ for (i = factS; i <= factE; i++) {
     factS = factS * i;
     document.write(i + '! =' + factS + '<br>');
 }
+
