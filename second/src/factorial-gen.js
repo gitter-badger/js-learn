@@ -6,22 +6,21 @@ var factStart = prompt('введите начало диапазона'),
     factEnd = prompt('введите конец диапазона'),
     factE = parseInt(factEnd, 10),
     factOri = 1;
-for (i = 1; i < (factE - 1); ++i)
-    {
-    factOri = factOri * i;
-        document.write(i + '! =' + factOri + '<br>');
-    }
-    factS =  factS * factOr;
-  /**  (j = factS; j < factE; j++)
-{
-    factS = factS * j;
-    document.write(j + '! =' + factS + '<br>');
+if (factS > factE){
+    alert ('Начало диапазона должно быть меньше конца диапазона!'); /** выход при кривом вводе*/
+    /**do stop;
+    else keep going*/
 }
-   /** factOri = factS * factE;
-    document.write(factE + '! =' + factOri + '<br>'); */
-    document.write(factS);
-/**document.write(i + '! =' + factS + '<br>');*/
+    else {
+        for (i = 1; i <= factS - 1; ++i) {
+            factOri = factOri * i;
+        }
 
-
-
-
+        for (i = factS; i <= factE; ++i) {/** разные счетчики?*/
+            factOri = factOri * i;
+            /** if (factOri = Infinity) {                //** выход при достижении бесконечности
+            do stop;
+            else keep going */
+            document.write(i + '! =' + factOri + '<br>');
+        }
+    }
