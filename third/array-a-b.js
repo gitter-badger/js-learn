@@ -50,12 +50,12 @@ var makePlusMinus = function makePlusMinus() {
 	}
 };
 
+
 /**
  * @param {Array.<number>} arrayA
  * @return {Array.<number>}
  */
 var toFilterArray = function(arrayA) {
-	//TODO toFilterArray
 	var arrayB = [];
 	for (var i = 0; i < arrayA.length; i++) {
 		if (i % 2 === 0 && arrayA[i] > 0) {
