@@ -12,6 +12,8 @@
 
 //формируем массив B
 
+//todo переписать использюя методы Array.prototype
+
 
 /**
  * @param {number} arraySize
