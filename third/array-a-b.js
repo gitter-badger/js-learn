@@ -45,8 +45,7 @@ var getRandom = function getRandom(randomMin, randomMax) {
 var makePlusMinus = function makePlusMinus() {
 	if (Math.random() < 0.5) {
 		return -1;
-	}
-	else {
+	} else {
 		return 1;
 	}
 };
