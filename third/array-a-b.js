@@ -50,9 +50,19 @@ var makePlusMinus = function makePlusMinus() {
 	}
 };
 
-generateArray(10, 0, 100);
-
-
-//var toFilterArray = function() {
-//	TODO toFilterArray
-//};
+/**
+ * @param {Array.<number>} arrayA
+ * @return {Array.<number>}
+ */
+var toFilterArray = function(arrayA) {
+	//TODO toFilterArray
+	var arrayB = [];
+	for (var i = 0; i < arrayA.length; i++) {
+		if (i % 2 === 0 && arrayA[i] > 0) {
+			arrayB[arrayB.length] = arrayA[i];
+		}
+	}
+	return arrayB;
+};
+var arrayA = generateArray(10, 0, 100);
+toFilterArray(arrayA);
