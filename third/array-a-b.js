@@ -12,8 +12,6 @@
 
 //формируем массив B
 
-//todo переписать использюя методы Array.prototype
-
 
 /**
  * @param {number} arraySize
@@ -25,7 +23,8 @@ var generateArray = function(arraySize, randomMin, randomMax) {
 	var arrayFirst = [];
 	for (var i = 0; i < arraySize; i++) {
 		var randomNumber = getRandom(randomMin, randomMax);
-		arrayFirst[i] = Math.round(randomNumber) * makePlusMinus();
+		var element = Math.round(randomNumber) * makePlusMinus();
+		arrayFirst.push(element);
 	}
 	return arrayFirst;
 };
@@ -58,13 +57,18 @@ var makePlusMinus = function makePlusMinus() {
  * @return {Array.<number>}
  */
 var toFilterArray = function(arrayA) {
-	var arrayB = [];
-	for (var i = 0; i < arrayA.length; i++) {
-		if (i % 2 === 0 && arrayA[i] > 0) {
-			arrayB[arrayB.length] = arrayA[i];
-		}
-	}
-	return arrayB;
+	return arrayA.filter(function(element, index) {
+		return index % 2 === 0 && element > 0;
+	});
+
+	// var arrayB = [];
+	//for (var i = 0; i < arrayA.length; i++) {
+	//	if (i % 2 === 0 && arrayA[i] > 0) {
+	//		arrayB[arrayB.length] = arrayA[i];
+	//	}
+	//}
+	//return arrayB;
 };
 var arrayA = generateArray(10, 0, 100);
-toFilterArray(arrayA);
+var arrayResult = toFilterArray(arrayA);
+console.log(arrayResult);
