@@ -70,7 +70,3 @@ Human.Gender = {
 	MALE: 'male',
 	FEMALE: 'female'
 };
-
-
-//добавить метод Human.protoype.married
-
