@@ -17,3 +17,4 @@ str += 'клетка ' + d + '<br />';
 }
 /**str +='<br />';*/
 document.write (str);
+//TODO http://javascript-ninja.fr/git-good-practices/
