@@ -18,6 +18,10 @@ Human.prototype.sayMyName = function() {
 	console.log('My name is', this.name);
 };
 
+Human.prototype.married = function() {
+
+};
+
 
 /**
  * @type {string}
@@ -44,3 +48,7 @@ Human.Gender = {
 	MALE: 'male',
 	FEMALE: 'female'
 };
+
+
+//добавить метод Human.protoype.married
+
