@@ -17,8 +17,19 @@ Human = function(params) {
 Human.prototype.sayMyName = function() {
 	console.log('My name is', this.name);
 };
+/*
+у одного женского экземпляра менять фамилию на такую же, как и у мужского.
+ */
+/**
+ *
+ * @param human
+ */
+Human.prototype.married = function(human) {
+	var isHuman = human instanceof Human;
+	var isDifferentGender = this.gender !== human.gender;
+	if (isHuman && isDifferentGender) {
 
-Human.prototype.married = function() {
+	}
 
 };
 
