@@ -25,6 +25,7 @@ Human.prototype.sayMyName = function() {
 /**
  *
  * @param {Human} human
+ * @return {boolean}
  */
 Human.prototype.married = function(human) {
 	var isHuman = human instanceof Human;
@@ -32,10 +33,12 @@ Human.prototype.married = function(human) {
 	if (isHuman && isDifferentGender) {
 		if (this.gender === Human.Gender.FEMALE) {
 			this.lastname = human.lastname;
-		}
-		else {
+		} else {
 			human.lastname = this.lastname;
 		}
+		return true;
+	} else {
+		return false;
 	}
 };
 
