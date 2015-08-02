@@ -29,3 +29,18 @@ Human.prototype.name;
  * @type {string}
  */
 Human.prototype.lastname;
+
+
+/**
+ * @type {Human.Gender}
+ */
+Human.prototype.gender;
+
+
+/**
+ * @enum {string}
+ */
+Human.Gender = {
+	MALE: 'male',
+	FEMALE: 'female'
+};
