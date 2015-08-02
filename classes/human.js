@@ -30,8 +30,10 @@ Human.prototype.sayMyName = function() {
 Human.prototype.married = function(human) {
 	var isHuman = human instanceof Human;
 	var isDifferentGender = this.gender !== human.gender;
+	var isFemale = this.gender === Human.Gender.FEMALE;
+
 	if (isHuman && isDifferentGender) {
-		if (this.gender === Human.Gender.FEMALE) {
+		if (isFemale) {
 			this.lastname = human.lastname;
 		} else {
 			human.lastname = this.lastname;
