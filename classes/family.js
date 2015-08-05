@@ -7,8 +7,8 @@
  * @constructor
  */
 Family = function(humans) {
-	this.dad = humanMale;
-	this.mom = humanFemale;
+	this.dad = humans.humanMale;
+	this.mom = humans.humanFemale;
 };
 
 /**
@@ -16,7 +16,7 @@ Family = function(humans) {
  * @param {string} childName
  */
 Family.prototype.childBirth = function (childName) {
-	this.child = new Human({name: childName, lastname: humanMale.lastname, gender: Human.Gender.MALE});
+	this.child = new Human({name: childName, lastname: this.dad.lastname, gender: Human.Gender.MALE});
 	return this.child;
 };
 
