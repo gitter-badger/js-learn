@@ -25,22 +25,22 @@ Human.prototype.sayMyName = function() {
 /**
  *
  * @param {Human} human
- * @return {boolean}
+ * @return {Family}
  */
 Human.prototype.married = function(human) {
 	var isHuman = human instanceof Human;
 	var isDifferentGender = this.gender !== human.gender;
 	var isFemale = this.gender === Human.Gender.FEMALE;
-
+	var newFamily = new Family({humanMale: human, humanFemale: this});
 	if (isHuman && isDifferentGender) {
 		if (isFemale) {
 			this.lastname = human.lastname;
 		} else {
 			human.lastname = this.lastname;
 		}
-		return true;
+		return newFamily;
 	} else {
-		return false;
+		return console.log ('No gay marriage allowed!');
 	}
 };
 

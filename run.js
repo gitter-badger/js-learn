@@ -8,6 +8,7 @@ var humanPasha = new Human({
 	lastname: 'Ivanov',
 	gender: Human.Gender.MALE
 });
-var isMarried = humanMasha.married(humanPasha);
-console.log(isMarried);
+humanMasha.married(humanPasha);
+newFamily.childBirth ('Pizduk');
+console.log(newFamily.child.name);
 
