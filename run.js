@@ -8,8 +8,23 @@ var humanPasha = new Human({
 	lastname: 'Ivanov',
 	gender: Human.Gender.MALE
 });
-var newFamily = humanMasha.married(humanPasha);
-console.log (humanMasha.lastname);
-newFamily.childBirth('Pizduk');
-console.log(newFamily.dad);
+
+//var newFamily = humanMasha.married(humanPasha);
+
+//console.log (humanMasha.lastname);
+//newFamily.childBirth('Pizduk');
+//console.log(newFamily.dad);
+
+var foo = {};
+foo.bar = {};
+foo.bar.baz = function() {
+	console.log(this);
+};
+
+foo.bar.baz();
+
+var fooForMasha = foo.bar.baz.bind(humanMasha);
+foo.bar.baz.call(humanMasha, a, b ,c);
+foo.bar.baz.apply(humanMasha, [a, b ,c]);
+fooForMasha();
 
