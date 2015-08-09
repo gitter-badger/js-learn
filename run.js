@@ -18,13 +18,14 @@ var humanPasha = new Human({
 var foo = {};
 foo.bar = {};
 foo.bar.baz = function() {
-	console.log(this);
+	console.log('this', this);
+	document.getElementById('el').style.backgroundColor = 'black';
 };
 
-foo.bar.baz();
+//foo.bar.baz.call(humanMasha, a, b ,c);
+//foo.bar.baz.apply(humanMasha, [a, b ,c]);
+//fooForMasha();
 
-var fooForMasha = foo.bar.baz.bind(humanMasha);
-foo.bar.baz.call(humanMasha, a, b ,c);
-foo.bar.baz.apply(humanMasha, [a, b ,c]);
-fooForMasha();
+document.getElementById('el').addEventListener('click', foo.bar.baz.bind(foo.bar));
+//setTimeout(foo.bar.baz.bind(foo.bar), 2000);
 
