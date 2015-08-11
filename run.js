@@ -19,7 +19,19 @@ var foo = {};
 foo.bar = {};
 foo.bar.baz = function() {
 	console.log('this', this);
-	document.getElementById('el').style.backgroundColor = 'black';
+	var isBlack = document.getElementById('el').style.backgroundColor === 'black';
+	var makeBlack = function() {
+		document.getElementById('el').style.backgroundColor = 'black';
+	};
+	var makeAqua = function() {
+		document.getElementById('el').style.backgroundColor = 'aqua';
+	};
+	if (isBlack) {
+		makeAqua();
+	}
+	else {
+		makeBlack();
+	}
 };
 
 //foo.bar.baz.call(humanMasha, a, b ,c);
@@ -29,3 +41,12 @@ foo.bar.baz = function() {
 document.getElementById('el').addEventListener('click', foo.bar.baz.bind(foo.bar));
 //setTimeout(foo.bar.baz.bind(foo.bar), 2000);
 
+var sayHello = function() {
+	console.log('Hello');
+	};
+
+
+var humanSilvestor = new Man({name: 'Silvestor', lastname: 'Koh'});
+console.log(humanSilvestor);
+
+humanSilvestor.sayMyName();
